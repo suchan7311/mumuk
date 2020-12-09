@@ -43,7 +43,7 @@
     <div style=" text-align: center;">
         <div
             style="color: #666;font-weight: bold; font-size: 25px;font-family: 'BinggraeSamanco', sans-serif;display:flex;justify-content:center">
-            랜덤 키워드:
+            추천 키워드:
             <div class='keywordbox' onclick="clickKeyword(this);">매운</div>
             <div class='line'></div>
             <div class='keywordbox' onclick="clickKeyword(this);">국물</div>

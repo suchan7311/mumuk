@@ -104,9 +104,14 @@ while($row[$n] = mysqli_fetch_array($result)){
       <div id="Review_Title" style="font-family: 'BinggraeSamanco';margin-top: auto; font-size: xx-large; border-bottom: 2px solid gray; padding-bottom: 5px;">
         평가
       </div>
+      <div style = "display: grid; grid-template-columns: 1fr 3fr; ">
+      <button id="call_store" onclick="callStore();" style="margin: 10px auto auto 0px;font-family:'BinggraeSamanco'; border-radius: 5px; border: none; background-color:#FCA973;font-size:25px">
+        맛집보기
+      </button>
       <button id="Add_Review" style="margin: 10px 0 auto auto;font-family:'BinggraeSamanco'; border-radius: 5px; border: none; background-color:#FCA973;font-size:25px">
         리뷰추가
       </button>
+      </div>
       <div id="Review_List">
         <?php
         for($i=0;$i<$n;$i++){
@@ -159,4 +164,11 @@ function searchFood() {
       window.location = "./addreview.php?temp=" + $(".search").val();
 
     });
+    
+    function callStore(){
+      var urlParams = new URLSearchParams(window.location.search);
+
+      var content = urlParams.get('temp');
+        window.location = "searchstore.php?temp=" + content;
+    }
 </script>
