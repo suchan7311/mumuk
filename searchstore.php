@@ -105,6 +105,9 @@ while($row[$n] = mysqli_fetch_array($result)){
         color: burlywood;
         text-align: center;
     }
+    .more_detail:hover{
+        cursor: pointer;
+    }
 </style>
 
 <body style="margin:auto; ">
